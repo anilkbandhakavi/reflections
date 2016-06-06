@@ -13,14 +13,35 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+	We can run a 'git diff --staged' that will show us the differences between the file 
+	in the staging area and the file version in the repository's last commit.
+	If we made changes in the latest file, then the difference will reflect the changes 
+	that we made.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+	Branches would be especially helpful when trying out different features, trials/experiments, 
+	without affecting the original code.
 
 How do the diagrams help you visualize the branch structure?
+	Shows me exactly at which node a new branch was created, so I can see which commits, 
+	are common between two or more branches. Makes it easy for me to visualize and know what to 
+	expect when I go back to previous versions.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+	merging two branch allows one to consolidate the changes of two branches.
+	For example, one might branch of in a project to work on a new feature, 
+	and when the feature is ready, he/she might want to add the feature to the main project 
+	that was prgressing on its own. The merge helps to bring the two branches toegether so 
+	now we have our latest project with the feature included. The diagram helps us understand 
+	when the branching happened so we know what stage the project was on when the work on the 
+	new feature began. We might need such information when we are looking at older versions 
+	of the code, or older diffs to figure out what got added where.
 
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?
+	Git automatic merging is very useful to consolidate two long branches of work together, but the 
+	issue is that we may run into conflicts where git is not able to decide which chunks of code 
+	to keep/remove. This is where the manual work comes in handy. Either way, git indicates 
+	that there are conflicts which one will have to resolve anyway before the merge can be committed.
